@@ -1,0 +1,214 @@
+/* Reset dan dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #111;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.top-bar {
+  background-color: #f9b700;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+}
+.logo {
+  height: 50px;
+  width: auto;
+}
+.search-bar {
+  flex: 1;
+  margin: 0 15px;
+  padding: 8px 15px;
+  border-radius: 25px;
+  border: none;
+  font-size: 1rem;
+  color: #333;
+  background: #fff;
+  cursor: not-allowed;
+}
+.auth-buttons a {
+  background-color: #111;
+  color: #f9b700;
+  padding: 10px 20px;
+  margin-left: 12px;
+  border-radius: 25px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 8px #f9b700;
+  transition: background-color 0.3s ease;
+}
+.auth-buttons a:hover {
+  background-color: #d99900;
+  color: #111;
+}
+
+/* Main */
+main {
+  flex: 1;
+  max-width: 960px;
+  margin: 20px auto 40px auto;
+  padding: 0 20px;
+}
+.judul {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 30px;
+  color: #f9b700;
+  text-shadow: 1px 1px 5px #000;
+}
+/* Gallery grid */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  align-items: stretch;
+  margin-bottom: 50px;
+}
+.card {
+  background-color: #222;
+  border-radius: 16px;
+  box-shadow: 0 0 15px rgba(249, 183, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.card-text {
+  padding: 16px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card-text h3 {
+  color: #f9b700;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+.card-text p {
+  color: #ccc;
+  font-size: 0.95rem;
+  flex-grow: 1;
+  margin-bottom: 15px;
+}
+.btn-read {
+  text-decoration: none;
+  padding: 10px 22px;
+  background-color: #f9b700;
+  color: #111;
+  font-weight: 600;
+  border-radius: 22px;
+  box-shadow: 0 0 8px #f9b700;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+.btn-read:hover {
+  background-color: #d99900;
+  color: #fff;
+}
+/* Pagination */
+.pagination {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.pagination a {
+  color: #f9b700;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 1.3rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 0 7px #f9b700;
+  transition: background-color 0.3s ease;
+}
+.pagination a.active,
+.pagination a:hover {
+  background-color: #f9b700;
+  color: #111;
+}
+
+/* Detail Page */
+.detail-main {
+  max-width: 720px;
+  margin: 40px auto 60px auto;
+  background-color: #222;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 0 20px rgba(249, 183, 0, 0.7);
+}
+.detail-main img {
+  width: 100%;
+  border-radius: 12px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+.detail-main h2 {
+  color: #f9b700;
+  margin-bottom: 16px;
+  font-size: 2rem;
+}
+.detail-main p {
+  color: #ddd;
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+.btn-back {
+  background-color: #f9b700;
+  color: #111;
+  padding: 12px 28px;
+  border-radius: 28px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 0 10px #f9b700;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.btn-back:hover {
+  background-color: #d99900;
+  color: #fff;
+}
+
+/* Footer */
+.footer {
+  background-color: #222;
+  color: #888;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 0.9rem;
+  box-shadow: inset 0 1px 5px rgba(249, 183, 0, 0.5);
+}
+
+/* Promo slider style */
+.promo-slider {
+  width: 100%;
+  max-width: 960px;
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(249, 183, 0, 0.7);
+}
+.promo-slider img {
+  width: 100%;
+  display: block;
+  transition: opacity 1s ease-in-out;
+}
